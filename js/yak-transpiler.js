@@ -39,8 +39,13 @@ function run() {
                 // Is the user calling a variable?
                 if (line.substring(5, 7) === "${") {
 
+                    console.log(variables[line.substring(7, line.search("}"))])
+
                     // Yes?
-                    console.log("${} found")
+                    let message = variables[line.substring(7, line.search("}"))]
+                    const paragraph = document.createElement('p')
+                    paragraph.innerHTML = message
+                    result.appendChild(paragraph)
                 } else {
 
                     // Get the contents of say()
@@ -69,6 +74,10 @@ function run() {
                     variables[line.substring(4)] = undefined
                 }
             }
+            else if (line === "forever {") {
+                console.log("Detect forever loop")
+            }
+
             // Don't recognise the command? Run this.
             else {
 
