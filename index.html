@@ -1,28 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Boring stuff here -->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Webpage title -->
     <title>Yak Interactive Compiler</title>
+
+    <!-- Link the CSS to make it beautiful! -->
     <link rel="stylesheet" href="/Users/27corm/Desktop/Everything/Coding/yak-interactive-compiler/css/style.css">
 </head>
 <body>
     
+    <!-- Create a container -->
     <div class="container">
         
+        <!-- Define the first half -->
         <div class="lefthalf">
+
+            <!-- Make a textarea to put the code in -->
             <textarea name="" id="scripting-area" cols="30" rows="45" spellcheck="false"></textarea>
+            <!-- The run button! -->
             <button onclick="run()">Run!</button>
         </div>
+
+        <!-- Store class (Basically a container in a container) -->
         <div class="store">
+
+            <!-- Define the right half -->
             <div class="righthalf">
+
+                <!-- Tell the user what this even is! -->
                 <p><b><u>This is the console! This is where your scripts are run!</u></b></p>
+
+                <!-- The result of the yak code will be written here for the user to see! -->
                 <div id="result">
         
                 </div>
                 
             </div>
+
+            <!-- Version number and my name =D -->
             <p class="credit"><b><u>Yak Interactive IDE v1.0 - Made by Marcus Cornes :D</u></b></p>
         </div>
         
@@ -31,6 +51,7 @@
         
     </div>
     
+    <!-- Import the Javascript to make the website work! -->
     <script src="/Users/27corm/Desktop/Everything/Coding/yak-interactive-compiler/js/yak-transpiler.js"></script>
 </body>
 </html>
